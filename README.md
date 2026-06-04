@@ -21,14 +21,6 @@ No build tools needed. This is a plain HTML/CSS/JS site.
 1. Clone the repo
 2. Open `index.html` in your browser — that's it.
 
-## Deployment (GitHub Pages)
-
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Under "Source", select **Deploy from a branch**
-4. Choose **main** branch, **/ (root)** folder
-5. Click Save — your site will be live at `https://yourusername.github.io/amplizon`
-
 ## Customisation Checklist
 
 - [ ] Replace `Amplizon` with your agency name throughout

@@ -662,7 +662,7 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  nav > ul > li:not(:last-child) {
+  nav > ul li:not(:last-child) {
     display: none;
   }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amplizon — Agence Amazon France</title>
+  <title>Marcavio — Agence Amazon France</title>
   <meta name="description" content="Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,16 +13,17 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="logo">Ampli<span>zon</span></div>
+    <div class="logo">Marca<span>vio</span></div>
     <ul>
       <li><a href="#services" data-i18n="nav_services">Services</a></li>
       <li><a href="#methode" data-i18n="nav_approach">Notre approche</a></li>
       <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta" data-i18n="nav_cta">Audit gratuit</a></li>
     </ul>
-    <div class="lang-switcher" id="lang-switcher">
+    <!-- Language Switcher -->
+    <div class="lang-switcher" id="lang-dropdown">
       <button class="lang-btn" id="lang-btn">🇫🇷 Français <span class="lang-arrow">▾</span></button>
-      <ul class="lang-menu" id="lang-menu">
+      <ul class="lang-menu">
         <li data-lang="fr">🇫🇷 Français</li>
         <li data-lang="en">🇬🇧 English</li>
         <li data-lang="sv">🇸🇪 Svenska</li>
@@ -35,7 +36,11 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-eyebrow" data-i18n="hero_eyebrow">Agence Amazon · France</div>
-      <h1 data-i18n="hero_h1">Votre marque mérite de <em>dominer</em> Amazon</h1>
+      <h1>
+        <span data-i18n="hero_h1_1">Votre marque mérite de</span>
+        <em data-i18n="hero_h1_em"> dominer</em>
+        <span data-i18n="hero_h1_2"> Amazon</span>
+      </h1>
       <p class="hero-sub" data-i18n="hero_sub">Nous aidons les marques françaises à lancer, optimiser et scaler leur présence sur Amazon — sans se perdre dans la complexité de la plateforme.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary" data-i18n="hero_btn_primary">Obtenir un audit gratuit</a>
@@ -98,7 +103,11 @@
   <section class="section" id="services">
     <div class="section-header">
       <div class="section-eyebrow" data-i18n="services_eyebrow">Nos services</div>
-      <h2 class="section-title" data-i18n="services_title">Tout ce dont vous avez besoin pour <em>réussir</em> sur Amazon</h2>
+      <h2 class="section-title">
+        <span data-i18n="services_title_1">Tout ce dont vous avez besoin pour</span>
+        <em data-i18n="services_title_em"> réussir</em>
+        <span data-i18n="services_title_2"> sur Amazon</span>
+      </h2>
     </div>
     <div class="services-grid">
       <div class="service-card">
@@ -139,7 +148,10 @@
     <div class="section" style="padding-top: 5rem; padding-bottom: 5rem;">
       <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
         <div class="section-eyebrow" data-i18n="how_eyebrow">Notre méthode</div>
-        <h2 class="section-title" style="margin: 0 auto; text-align: center;" data-i18n="how_title">De zéro à leader de <em>catégorie</em></h2>
+        <h2 class="section-title" style="margin: 0 auto; text-align: center;">
+          <span data-i18n="how_title_1">De zéro à leader de</span>
+          <em data-i18n="how_title_em"> catégorie</em>
+        </h2>
       </div>
       <div class="how-grid">
         <div class="how-step">
@@ -178,19 +190,22 @@
 
   <!-- CTA -->
   <section class="cta-section" id="contact">
-    <h2 data-i18n="cta_title">Prêt à faire de Amazon votre <em>meilleur vendeur</em> ?</h2>
+    <h2>
+      <span data-i18n="cta_title_1">Prêt à faire de Amazon votre</span>
+      <em data-i18n="cta_title_em"> meilleur vendeur</em> ?
+    </h2>
     <p data-i18n="cta_sub">Obtenez un audit gratuit de votre marque — sans engagement, en 48h.</p>
     <div class="cta-btns">
-      <a href="mailto:contact@amplizon.fr" class="btn-primary" data-i18n="cta_btn_primary">Demander mon audit gratuit</a>
-      <a href="mailto:contact@amplizon.fr" class="btn-secondary" data-i18n="cta_btn_secondary">Nous contacter</a>
+      <a href="mailto:contact@marcavio.fr" class="btn-primary" data-i18n="cta_btn_primary">Demander mon audit gratuit</a>
+      <a href="mailto:contact@marcavio.fr" class="btn-secondary" data-i18n="cta_btn_secondary">Nous contacter</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="logo">Ampli<span>zon</span></div>
-    <p data-i18n="footer_copy">© 2026 Amplizon. Agence Amazon française.</p>
-    <p data-i18n="footer_location">Paris, France · contact@amplizon.fr</p>
+    <div class="logo">Marca<span>vio</span></div>
+    <p data-i18n="footer_copy">© 2026 Marcavio. Agence Amazon française.</p>
+    <p data-i18n="footer_location">Paris, France · contact@marcavio.fr</p>
   </footer>
 
   <script src="js/i18n.js"></script>

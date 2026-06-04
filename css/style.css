@@ -603,6 +603,79 @@ footer p {
 }
 
 /* ===========================
+   LANGUAGE SWITCHER
+   =========================== */
+
+.lang-switcher {
+  position: relative;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--white);
+}
+
+.lang-arrow {
+  font-size: 0.7rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.lang-switcher.open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--navy-mid);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  list-style: none;
+  padding: 0.4rem;
+  min-width: 150px;
+  z-index: 200;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.lang-switcher.open .lang-menu {
+  display: block;
+}
+
+.lang-menu li {
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+}
+
+.lang-menu li:hover,
+.lang-menu li.active {
+  background: rgba(232, 160, 32, 0.1);
+  color: var(--white);
+}
+
+/* ===========================
    RESPONSIVE
    =========================== */
 
@@ -662,7 +735,7 @@ footer p {
 }
 
 @media (max-width: 600px) {
-  nav ul li:not(:last-child) {
+  nav > ul > li:not(:last-child) {
     display: none;
   }
 

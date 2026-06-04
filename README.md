@@ -1,16 +1,17 @@
-# Amplizon — Landing Page
+# Marcavio — Landing Page
 
-Landing page for Amplizon, a French Amazon agency helping French brands launch and grow on Amazon.fr.
+Landing page for Marcavio, a French Amazon agency helping French brands launch and grow on Amazon.fr.
 
 ## Project Structure
 
 ```
-amplizon/
+marcavio/
 ├── index.html       # Main landing page
 ├── css/
 │   └── style.css    # All styles
 ├── js/
-│   └── main.js      # Scroll animations & interactions
+│   ├── main.js      # Scroll animations & interactions
+│   └── i18n.js      # Multi-language translations
 └── README.md
 ```
 
@@ -21,10 +22,22 @@ No build tools needed. This is a plain HTML/CSS/JS site.
 1. Clone the repo
 2. Open `index.html` in your browser — that's it.
 
+## Languages
+
+The site supports 4 languages via a dropdown in the top-right corner:
+- 🇫🇷 French (default)
+- 🇬🇧 English
+- 🇸🇪 Swedish
+- 🇪🇸 Spanish
+
+The selected language is saved in `localStorage` so it persists across page reloads.
+
+To add a new language, add a new entry to the `translations` object in `js/i18n.js`.
+
 ## Customisation Checklist
 
-- [ ] Replace `Amplizon` with your agency name throughout
-- [ ] Update `contact@amplizon.fr` with your real email
+- [ ] Replace `Marcavio` with your agency name throughout
+- [ ] Update `contact@marcavio.fr` with your real email
 - [ ] Replace placeholder stats (+147%, -38%) with real client results
 - [ ] Replace the testimonial with a real client quote
 - [ ] Add your logo or favicon
@@ -34,5 +47,5 @@ No build tools needed. This is a plain HTML/CSS/JS site.
 
 - HTML5
 - CSS3 (custom properties, CSS Grid, responsive)
-- Vanilla JavaScript (IntersectionObserver for scroll animations)
+- Vanilla JavaScript (IntersectionObserver, i18n, localStorage)
 - Google Fonts: Instrument Serif + DM Sans

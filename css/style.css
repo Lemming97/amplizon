@@ -62,14 +62,14 @@ nav {
   font-style: italic;
 }
 
-nav ul {
+nav > ul {
   list-style: none;
   display: flex;
   gap: 2.5rem;
   align-items: center;
 }
 
-nav ul a {
+nav > ul a {
   text-decoration: none;
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -78,7 +78,7 @@ nav ul a {
   transition: color 0.2s;
 }
 
-nav ul a:hover {
+nav > ul a:hover {
   color: var(--white);
 }
 
@@ -603,79 +603,6 @@ footer p {
 }
 
 /* ===========================
-   LANGUAGE SWITCHER
-   =========================== */
-
-.lang-switcher {
-  position: relative;
-}
-
-.lang-btn {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--text-muted);
-  padding: 0.45rem 1rem;
-  border-radius: 100px;
-  cursor: pointer;
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: border-color 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-
-.lang-btn:hover {
-  border-color: rgba(255, 255, 255, 0.35);
-  color: var(--white);
-}
-
-.lang-arrow {
-  font-size: 0.7rem;
-  display: inline-block;
-  transition: transform 0.2s;
-}
-
-.lang-switcher.open .lang-arrow {
-  transform: rotate(180deg);
-}
-
-.lang-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  background: var(--navy-mid);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  list-style: none;
-  padding: 0.4rem;
-  min-width: 150px;
-  z-index: 200;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.lang-switcher.open .lang-menu {
-  display: block;
-}
-
-.lang-menu li {
-  padding: 0.55rem 1rem;
-  cursor: pointer;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: background 0.15s, color 0.15s;
-}
-
-.lang-menu li:hover,
-.lang-menu li.active {
-  background: rgba(232, 160, 32, 0.1);
-  color: var(--white);
-}
-
-/* ===========================
    RESPONSIVE
    =========================== */
 
@@ -684,7 +611,7 @@ footer p {
     padding: 1.2rem 2rem;
   }
 
-  nav ul {
+  nav > ul {
     gap: 1.5rem;
   }
 
@@ -766,4 +693,80 @@ footer p {
   .quote-text {
     font-size: 1.2rem;
   }
+}
+
+/* ===========================
+   LANGUAGE SWITCHER
+   =========================== */
+
+.lang-switcher {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.lang-btn {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.45rem 0.9rem;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--navy-light);
+}
+
+.lang-arrow {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  transition: transform 0.2s;
+}
+
+.lang-switcher.open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--navy-mid);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  list-style: none;
+  overflow: hidden;
+  min-width: 140px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 200;
+}
+
+.lang-switcher.open .lang-menu {
+  display: block;
+}
+
+.lang-menu li {
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-menu li:hover {
+  background: var(--navy-light);
+  color: var(--white);
 }
